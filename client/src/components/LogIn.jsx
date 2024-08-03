@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Box, Flex, Input, Button, Text } from '@chakra-ui/react';
 import axios from 'axios';
 
-const Login = () => {
+const LogIn = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -48,11 +48,11 @@ const Login = () => {
           _hover={{ bg: "blue.600" }}
           width="100%"
         >
-          Login
+          LogIn
         </Button>
       </Box>
     </Flex>
   );
 };
 
-export default Login;
+export default LogIn;
