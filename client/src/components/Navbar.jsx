@@ -57,7 +57,7 @@ const Navbar = () => {
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent
-          bg="6C7C59"
+          bg="#6C7C59"
           color="white"
           fontFamily="Ramabhadra, cursive"
           _focus={{ outline: 'none', boxShadow: 'none' }}

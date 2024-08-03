@@ -46,12 +46,12 @@ const Home = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='white' mb={80}></Text>
+          <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='white' mb={80}>Timber</Text>
         </Box>
         <Box
           as="button"
           onClick={() => handleCardClick('')}
-          bgImage="url('src/assets/pine-trees-main.png')"
+          bgImage="url('src/assets/oil-rig.jpg')"
           bgSize="cover"
           bgPos="center"
           boxShadow="md"
@@ -65,7 +65,7 @@ const Home = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='yellow' mt={80}></Text>
+          <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='#45503B' mt={80}>Mineral Rights</Text>
         </Box>
       </Flex>
     </Flex>
