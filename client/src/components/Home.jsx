@@ -6,11 +6,11 @@ const Home = () => {
   };
 
   return (
-    <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='lawngreen' p={5} textAlign="center">
+    <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
         <Box
         as="button"
         onClick={() => handleCardClick('Welcome!')}
-        bgImage={`url('/src/assets/')`}
+        bgImage={`url('/src/assets/pine-tree.jpg')`}
         bgSize="cover"
         bgPos="center"
         boxShadow="md"
@@ -26,46 +26,46 @@ const Home = () => {
       >
       </Box>
       <Flex direction='column' align='center' mb={10}>
-        <Text fontSize="2xl" color='white' fontFamily='Amatic SC, cursive' mb={10}>Welcome to Harvey Timber</Text>
+        <Text fontSize="2xl" color='white' fontFamily='Ramabhadra, cursive' mb={10}>Welcome to Harvey Timber</Text>
       </Flex>
       <Flex direction={['column', 'row']} spacing={10}>
         <Box
           as="button"
           onClick={() => handleCardClick('')}
-          bgImage="url('src/assets/')"
+          bgImage="url('src/assets/pine-trees-main.png')"
           bgSize="cover"
           bgPos="center"
           boxShadow="md"
           p={5}
           rounded="md"
           m={2}
-          width="300px"
+          width="400px"
           height="400px"
           display="flex"
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="xl" fontFamily='Amatic SC, cursive' color='white' mb={80}></Text>
+          <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='white' mb={80}></Text>
         </Box>
         <Box
           as="button"
           onClick={() => handleCardClick('')}
-          bgImage="url('src/assets/')"
+          bgImage="url('src/assets/pine-trees-main.png')"
           bgSize="cover"
           bgPos="center"
           boxShadow="md"
           p={5}
           rounded="md"
           m={2}
-          width="300px"
+          width="400px"
           height="400px"
           display="flex"
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="xl" fontFamily='Amatic SC, cursive' color='yellow' mt={80}></Text>
+          <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='yellow' mt={80}></Text>
         </Box>
       </Flex>
     </Flex>

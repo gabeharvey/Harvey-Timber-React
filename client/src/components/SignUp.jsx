@@ -16,7 +16,7 @@ const SignUp = () => {
   };
 
   return (
-    <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='lawngreen' p={5} textAlign="center">
+    <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='seagreen' p={5} textAlign="center">
       <Box
         bg='white'
         boxShadow="md"
@@ -25,13 +25,13 @@ const SignUp = () => {
         width="300px"
         textAlign="left"
       >
-        <Text fontSize="2xl" color='lawngreen' fontFamily='Amatic SC, cursive' mb={5}>Sign Up</Text>
+        <Text fontSize="2xl" color='seagreen' fontFamily='Ramabhadra, cursive' mb={5}>Sign Up</Text>
         <Input
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           mb={3}
-          borderColor="lawngreen"
+          borderColor="seagreen"
         />
         <Input
           placeholder="Password"
@@ -39,11 +39,11 @@ const SignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           mb={6}
-          borderColor="lawngreen"
+          borderColor="seagreen"
         />
         <Button
           onClick={handleSignup}
-          bg="lawngreen"
+          bg="seagreen"
           color="white"
           _hover={{ bg: "blue.600" }}
           width="100%"

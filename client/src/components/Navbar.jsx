@@ -22,12 +22,12 @@ const Navbar = () => {
       align="center"
       justify="space-between"
       padding="5px"
-      bg="green"
+      bg="#6C7C59"
       height="80px"
       bgImage="linear-gradient(45deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent)"
-      bgSize="10px 10px"
+      bgSize="5px 5px"
     >
-      <Box fontFamily="Amatic SC, cursive" fontSize="22px" color="lawngreen" p={1}>
+      <Box fontFamily="Ramabhadra, cursive" fontSize="30px" color="white" p={1}>
         <Link cursor="pointer" href='/'>Harvey Timber</Link>
       </Box>
       <Spacer />
@@ -38,13 +38,13 @@ const Navbar = () => {
           aria-label="Menu"
           onClick={onOpen}
           _hover={{ cursor: 'pointer' }}
-          color="lawngreen"
+          color="white"
           _focus={{ outline: 'none', boxShadow: 'none' }}
           _active={{ background: 'transparent' }}
         />
       ) : (
         <Box display={{ base: 'none', md: 'block' }}>
-          <Flex align="right" fontFamily="Amatic SC, cursive" fontSize="15px" color="white">
+          <Flex align="right" fontFamily="Ramabhadra, cursive" fontSize="15px" color="white">
             <Link cursor="pointer" mr={3} href="/signup">
               Sign Up
             </Link>
@@ -57,9 +57,9 @@ const Navbar = () => {
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent
-          bg="lawngreen"
+          bg="6C7C59"
           color="white"
-          fontFamily="Amatic SC, cursive"
+          fontFamily="Ramabhadra, cursive"
           _focus={{ outline: 'none', boxShadow: 'none' }}
           _active={{ background: 'transparent' }}
         >
