@@ -16,17 +16,17 @@ const Footer = () => {
     >
       <Flex direction="column" align="center">
         <Box>
-          <Link href="/about" mr={4} _hover={{ textDecoration: 'underline' }}>
+          <Link href="/about" mr={3} _hover={{ textDecoration: 'underline' }}>
             About Us
           </Link>
-          <Link href="/contact" mr={4} _hover={{ textDecoration: 'underline' }}>
+          <Link href="/contact" mr={3} _hover={{ textDecoration: 'underline' }}>
             Contact
           </Link>
           <Link href="/privacy" _hover={{ textDecoration: 'underline' }}>
             Privacy Policy
           </Link>
         </Box>
-        <Text mt={4}>© 2024 Harvey Timber. All rights reserved.</Text>
+        <Text mt={3}>© 2024 Harvey Timber. All rights reserved.</Text>
       </Flex>
     </Flex>
   );
