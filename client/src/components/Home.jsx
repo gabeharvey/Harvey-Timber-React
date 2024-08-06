@@ -36,7 +36,7 @@ const Home = () => {
           bgSize="cover"
           bgPos="center"
           boxShadow="md"
-          p={5}
+          p={4}
           rounded="md"
           m={2}
           width="400px"
@@ -55,7 +55,7 @@ const Home = () => {
           bgSize="cover"
           bgPos="center"
           boxShadow="md"
-          p={5}
+          p={4}
           rounded="md"
           m={2}
           width="400px"
