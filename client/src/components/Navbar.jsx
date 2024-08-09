@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Flex, IconButton, Spacer, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Link } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -33,7 +33,7 @@ const Navbar = () => {
       <Spacer />
       {isMobile ? (
         <IconButton
-          icon={<HamburgerIcon />}
+          icon={<HamburgerIcon w={8} h={8} />}
           variant="ghost"
           aria-label="Menu"
           onClick={onOpen}
@@ -63,7 +63,31 @@ const Navbar = () => {
           _focus={{ outline: 'none', boxShadow: 'none' }}
           _active={{ background: 'transparent' }}
         >
-          <DrawerCloseButton _hover={{ cursor: 'pointer' }} mt="8px" />
+          <DrawerCloseButton
+            _hover={{ cursor: 'pointer' }}
+            mt="8px"
+            color="white"
+            _focus={{ outline: 'none', boxShadow: 'none' }}
+            _active={{ background: 'transparent' }}
+            sx={{
+              width: '40px',
+              height: '40px',
+              top: '4px',
+              '&::before, &::after': {
+                content: '""',
+                position: 'absolute',
+                width: '24px',
+                height: '4px',
+                bg: 'white',
+              },
+              '&::before': {
+                transform: 'rotate(45deg)',
+              },
+              '&::after': {
+                transform: 'rotate(-45deg)',
+              },
+            }}
+          />
           <DrawerHeader borderBottom="3px solid white">Menu</DrawerHeader>
           <DrawerBody>
             <Flex direction="column">
