@@ -27,7 +27,7 @@ const Navbar = () => {
       bgImage="linear-gradient(45deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent)"
       bgSize="5px 5px"
     >
-      <Box fontFamily="Ramabhadra, cursive" fontSize="30px" color="white" p={1}>
+      <Box fontFamily="Rakkas, cursive" fontSize="30px" color="white" p={1}>
         <Link cursor="pointer" href='/'>Harvey Timber</Link>
       </Box>
       <Spacer />
@@ -44,7 +44,7 @@ const Navbar = () => {
         />
       ) : (
         <Box display={{ base: 'none', md: 'block' }}>
-          <Flex align="right" fontFamily="Ramabhadra, cursive" fontSize="15px" color="white">
+          <Flex align="right" fontFamily="Rakkas, cursive" fontSize="15px" color="white">
             <Link cursor="pointer" mr={3} href="/signup">
               Sign Up
             </Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
         <DrawerContent
           bg="#6C7C59"
           color="white"
-          fontFamily="Ramabhadra, cursive"
+          fontFamily="Rakkas, cursive"
           _focus={{ outline: 'none', boxShadow: 'none' }}
           _active={{ background: 'transparent' }}
         >

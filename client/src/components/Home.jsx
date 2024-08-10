@@ -24,10 +24,10 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='white' mb={99}>Loblolly Pines</Text>
+        <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mb={99}>Loblolly Pines</Text>
       </Box>
       <Flex direction='column' align='center' mb={10}>
-        <Text fontSize="5xl" color='white' fontFamily='Exo 2, cursive' mb={10}>Welcome to Harvey Timber</Text>
+        <Text fontSize="5xl" color='white' fontFamily='Rakkas, cursive' mb={10}>Welcome to Harvey Timber</Text>
       </Flex>
       <Flex direction={['column', 'row']} spacing={10}>
         <Box
@@ -47,7 +47,7 @@ const Home = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='white' mt={80}>Timber</Text>
+          <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={80}>Timber</Text>
         </Box>
         <Box
           as="button"
@@ -66,7 +66,7 @@ const Home = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='#45503B' mt={80}>Mineral Rights</Text>
+          <Text fontSize="xl" fontFamily='Rakkas, cursive' color='#45503B' mt={80}>Mineral Rights</Text>
         </Box>
       </Flex>
     </Flex>

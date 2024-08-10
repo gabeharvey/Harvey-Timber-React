@@ -11,7 +11,7 @@ const Footer = () => {
       height="100px"
       bgImage="linear-gradient(45deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent)"
       bgSize="5px 5px"
-      fontFamily="Ramabhadra, cursive"
+      fontFamily="Rakkas, cursive"
       color="white"
     >
       <Flex direction="column" align="center">
