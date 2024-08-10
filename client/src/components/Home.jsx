@@ -27,7 +27,7 @@ const Home = () => {
         <Text fontSize="xl" fontFamily='Ramabhadra, cursive' color='white' mb={99}>Loblolly Pines</Text>
       </Box>
       <Flex direction='column' align='center' mb={10}>
-        <Text fontSize="5xl" color='white' fontFamily='cursive' mb={10}>Welcome to Harvey Timber</Text>
+        <Text fontSize="5xl" color='white' fontFamily='Exo 2, cursive' mb={10}>Welcome to Harvey Timber</Text>
       </Flex>
       <Flex direction={['column', 'row']} spacing={10}>
         <Box
