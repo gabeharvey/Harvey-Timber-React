@@ -1,13 +1,23 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, keyframes } from '@chakra-ui/react';
 
 const Home = () => {
   const handleCardClick = (message) => {
     alert(message);
   };
 
+  const typing = keyframes`
+    from { width: 0; }
+    to { width: 100%; }
+  `;
+
+  const blinkCaret = keyframes`
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+  `;
+
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
-        <Box
+      <Box
         as="button"
         onClick={() => handleCardClick('Welcome!')}
         bgImage={`url('/src/assets/loblolly-pine.jpg')`}
@@ -26,9 +36,25 @@ const Home = () => {
       >
         <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mb={99}>Loblolly Pines</Text>
       </Box>
-      <Flex direction='column' align='center' mb={10}>
-        <Text fontSize="5xl" color='white' fontFamily='Rakkas, cursive' mb={10}>Welcome to Harvey Timber</Text>
-      </Flex>
+      <Box
+        as="div"
+        width="auto"
+        overflow="hidden"
+        whiteSpace="nowrap"
+        borderRight="2px solid"
+        display="inline-block"
+        animation={`${typing} 4s steps(22) 1s 1 normal both, ${blinkCaret} 0.75s step-end infinite`}
+        mb={10}
+      >
+        <Text
+          fontSize="5xl"
+          color='white'
+          fontFamily='Rakkas, cursive'
+          display="inline-block"
+        >
+          Welcome to Harvey Timber
+        </Text>
+      </Box>
       <Flex direction={['column', 'row']} spacing={10}>
         <Box
           as="button"
@@ -52,7 +78,7 @@ const Home = () => {
         <Box
           as="button"
           onClick={() => handleCardClick('')}
-          bgImage="url('src/assets/oil-rig.jpg')"
+          bgImage="url('src/assets/oil-rig-old-fashioned.jpg')"
           bgSize="cover"
           bgPos="center"
           boxShadow="md"
@@ -66,7 +92,7 @@ const Home = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Text fontSize="xl" fontFamily='Rakkas, cursive' color='#45503B' mt={80}>Mineral Rights</Text>
+          <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={80}>Mineral Rights</Text>
         </Box>
       </Flex>
     </Flex>
