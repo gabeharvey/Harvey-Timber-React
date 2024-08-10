@@ -10,7 +10,7 @@ const Home = () => {
         <Box
         as="button"
         onClick={() => handleCardClick('Welcome!')}
-        bgImage={`url('/src/assets/pine-tree.jpg')`}
+        bgImage={`url('/src/assets/loblolly-pine.jpg')`}
         bgSize="cover"
         bgPos="center"
         boxShadow="md"
@@ -32,7 +32,7 @@ const Home = () => {
         <Box
           as="button"
           onClick={() => handleCardClick('')}
-          bgImage="url('src/assets/pine-trees-main.png')"
+          bgImage="url('src/assets/loblolly-mature-farm.jpg')"
           bgSize="cover"
           bgPos="center"
           boxShadow="md"
