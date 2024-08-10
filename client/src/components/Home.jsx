@@ -44,10 +44,10 @@ const Home = () => {
         borderRight="2px solid"
         display="inline-block"
         animation={`${typing} 4s steps(22) 1s 1 normal both, ${blinkCaret} 0.75s step-end infinite`}
-        mb={10}
+        mb={20}
       >
         <Text
-          fontSize="5xl"
+          fontSize="2xl"
           color='white'
           fontFamily='Rakkas, cursive'
           display="inline-block"
@@ -66,7 +66,7 @@ const Home = () => {
           p={4}
           rounded="md"
           m={2}
-          width="400px"
+          width="300px"
           height="400px"
           display="flex"
           flexDirection="column"
@@ -85,7 +85,7 @@ const Home = () => {
           p={4}
           rounded="md"
           m={2}
-          width="400px"
+          width="300px"
           height="400px"
           display="flex"
           flexDirection="column"
