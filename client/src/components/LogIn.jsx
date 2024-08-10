@@ -25,7 +25,7 @@ const LogIn = () => {
         width="300px"
         textAlign="left"
       >
-        <Text fontSize="2xl" color='#45503B' fontFamily='Ramabhadra, cursive' mb={4}>Login</Text>
+        <Text fontSize="2xl" color='#45503B' fontFamily='Rakkas, cursive' mb={4}>Login</Text>
         <Input
           placeholder="Username"
           value={username}
