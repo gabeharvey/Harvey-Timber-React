@@ -8,7 +8,7 @@ const Map = () => {
         bgSize="cover"
         bgPos="center"
         boxShadow="md"
-        p={4}
+        p={3}
         rounded="md"
         width="80%"  
         height="100vh" 
