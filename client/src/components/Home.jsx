@@ -95,6 +95,24 @@ const Home = () => {
           <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={80}>Mineral Rights</Text>
         </Box>
       </Flex>
+      <Box
+        as="button"
+        onClick={() => handleCardClick('')}
+        bgImage="url('src/assets/aerial-mapping.jpg')"
+        bgSize="cover"
+        bgPos="center"
+        boxShadow="md"
+        p={4}
+        rounded="md"
+        mt={20}
+        width="600px"
+        height="400px"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={80}>Aerial Mapping</Text>
+      </Box>
     </Flex>
   );
 };
