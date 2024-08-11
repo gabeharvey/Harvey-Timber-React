@@ -59,7 +59,7 @@ const Home = () => {
         <Box
           as="button"
           onClick={() => handleCardClick('')}
-          bgImage="url('src/assets/loblolly-mature-farm.jpg')"
+          bgImage="url('src/assets/loblolly-young-farm.jpg')"
           bgSize="cover"
           bgPos="center"
           boxShadow="md"
