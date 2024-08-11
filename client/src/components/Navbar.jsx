@@ -51,6 +51,9 @@ const Navbar = () => {
             <Link cursor="pointer" mr={3} href="/login">
               Log In
             </Link>
+            <Link cursor="pointer" mr={3} href="/map">
+              Map
+            </Link>
           </Flex>
         </Box>
       )}
@@ -96,6 +99,9 @@ const Navbar = () => {
               </Link>
               <Link onClick={onClose} cursor="pointer" mb={4} href="/login">
                 Log In
+              </Link>
+              <Link onClick={onClose} cursor="pointer" mb={4} href="/map">
+                Map
               </Link>
             </Flex>
           </DrawerBody>
