@@ -16,10 +16,10 @@ const Footer = () => {
     >
       <Flex direction="column" align="center">
         <Box>
-          <Link href="/about" mr={2} _hover={{ textDecoration: 'underline' }}>
+          <Link href="/about" mr={4} _hover={{ textDecoration: 'underline' }}>
             About Us
           </Link>
-          <Link href="/contact" mr={2} _hover={{ textDecoration: 'underline' }}>
+          <Link href="/contact" mr={4} _hover={{ textDecoration: 'underline' }}>
             Contact
           </Link>
           <Link href="/privacy" _hover={{ textDecoration: 'underline' }}>
