@@ -1,4 +1,5 @@
 import { Box, Flex, Text, keyframes } from '@chakra-ui/react';
+import {Link} from 'react-router-dom';
 
 const Home = () => {
   const handleCardClick = (message) => {
@@ -95,9 +96,8 @@ const Home = () => {
           <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={80}>Mineral Rights</Text>
         </Box>
       </Flex>
+      <Link to='/map'>
       <Box
-        as="button"
-        onClick={() => handleCardClick('')}
         bgImage="url('src/assets/aerial-mapping.jpg')"
         bgSize="cover"
         bgPos="center"
@@ -113,6 +113,7 @@ const Home = () => {
       >
         <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={80}>Aerial Mapping</Text>
       </Box>
+      </Link>
     </Flex>
   );
 };
