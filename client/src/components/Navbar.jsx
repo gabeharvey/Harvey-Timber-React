@@ -45,13 +45,15 @@ const Navbar = () => {
       ) : (
         <Box display={{ base: 'none', md: 'block' }}>
           <Flex align="right" fontFamily="Rakkas, cursive" fontSize="15px" color="white">
+            <Link cursor="pointer" mr={3} href="/">
+              Home
+            </Link>
             <Link cursor="pointer" mr={3} href="/signup">
               Sign Up
             </Link>
             <Link cursor="pointer" mr={3} href="/login">
               Log In
             </Link>
-            
             <Link cursor="pointer" mr={3} href="/timber">
               Timber
             </Link>
@@ -65,7 +67,7 @@ const Navbar = () => {
               Aerial Mapping
             </Link>
             <Link cursor="pointer" mr={3} href="/loblolly">
-              Aboout Loblolly Pines
+              About Loblolly Pines
             </Link>
           </Flex>
         </Box>
@@ -107,13 +109,15 @@ const Navbar = () => {
           <DrawerHeader borderBottom="3px solid white">Menu</DrawerHeader>
           <DrawerBody>
             <Flex direction="column">
+              <Link onClick={onClose} cursor="pointer" mb={4} href="/">
+                Home
+              </Link>
               <Link onClick={onClose} cursor="pointer" mb={4} href="/signup">
                 Sign Up
               </Link>
               <Link onClick={onClose} cursor="pointer" mb={4} href="/login">
                 Log In
               </Link>
-              
               <Link onClick={onClose} cursor="pointer" mb={4} href="/timber">
                 Timber
               </Link>
