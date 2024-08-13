@@ -7,6 +7,8 @@ import LogIn from '../components/LogIn.jsx';
 import SignUp from '../components/SignUp.jsx';
 import Home from '../components/Home.jsx'
 import Map from '../components/Map.jsx'
+import Timber from '../components/Timber.jsx'
+import MineralRights from '../components/MineralRights.jsx'
 
 const router = createBrowserRouter ([
     { path: '/',
@@ -27,7 +29,15 @@ const router = createBrowserRouter ([
             {
                 path: 'map',
                 element: <Map />
-            }
+            },
+            {
+                path: 'timber',
+                element: <Timber />
+            },
+            {
+                path: 'mineralrights',
+                element: <MineralRights />
+            },
         ]
     }
 ])
