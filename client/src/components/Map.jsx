@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Link, Button } from '@chakra-ui/react';
 
 const Map = () => {
   return (
@@ -19,6 +19,20 @@ const Map = () => {
         mt={20}
       >
       </Box>
+      <Link to='/'>
+      <Button
+          mt={10}
+          bg='gray'
+          color='white'
+          fontFamily='Rakkas, cursive'
+          fontSize='xl'
+          _hover={{ bg: 'darkgray' }}
+          _active={{ bg: 'darkgray', transform: 'scale(0.98)' }}
+          _focus={{ boxShadow: 'outline' }}
+        >
+          Home
+        </Button>
+      </Link>
     </Flex>
   );
 };

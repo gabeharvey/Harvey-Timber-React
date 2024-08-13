@@ -2,9 +2,6 @@ import { Box, Flex, Text, keyframes } from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
 
 const Home = () => {
-  const handleCardClick = (message) => {
-    alert(message);
-  };
 
   const typing = keyframes`
     from { width: 0; }
@@ -18,9 +15,8 @@ const Home = () => {
 
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
+      <Link to='/loblolly'>
       <Box
-        as="button"
-        onClick={() => handleCardClick('Welcome!')}
         bgImage={`url('/src/assets/loblolly-pine.jpg')`}
         bgSize="cover"
         bgPos="center"
@@ -37,6 +33,7 @@ const Home = () => {
       >
         <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mb={99}>Loblolly Pines</Text>
       </Box>
+      </Link>
       <Box
         as="div"
         width="auto"
