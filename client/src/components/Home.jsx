@@ -32,7 +32,7 @@ const Home = () => {
         <Text
           fontSize="2xl"
           color='white'
-          fontFamily='Rakkas, cursive'
+          fontFamily='Silkscreen, cursive'
           display="inline-block"
         >
           Welcome to Harvey Timber
