@@ -51,8 +51,20 @@ const Navbar = () => {
             <Link cursor="pointer" mr={3} href="/login">
               Log In
             </Link>
+            <Link cursor="pointer" mr={3} href="/loblolly">
+              Aboout Loblolly Pines
+            </Link>
+            <Link cursor="pointer" mr={3} href="/timber">
+              Timber
+            </Link>
+            <Link cursor="pointer" mr={3} href="/mineralrights">
+              Mineral Rights
+            </Link>
+            <Link cursor="pointer" mr={3} href="/wildlife">
+              Wildlife
+            </Link>
             <Link cursor="pointer" mr={3} href="/map">
-              Map
+              Aerial Mapping
             </Link>
           </Flex>
         </Box>
@@ -99,6 +111,18 @@ const Navbar = () => {
               </Link>
               <Link onClick={onClose} cursor="pointer" mb={4} href="/login">
                 Log In
+              </Link>
+              <Link onClick={onClose} cursor="pointer" mb={4} href="/loblolly">
+                About Loblolly Pines
+              </Link>
+              <Link onClick={onClose} cursor="pointer" mb={4} href="/timber">
+                Timber
+              </Link>
+              <Link onClick={onClose} cursor="pointer" mb={4} href="/mineralrights">
+                Mineral Rights
+              </Link>
+              <Link onClick={onClose} cursor="pointer" mb={4} href="/wildlife">
+                Wildlife
               </Link>
               <Link onClick={onClose} cursor="pointer" mb={4} href="/map">
                 Map
