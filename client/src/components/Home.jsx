@@ -124,21 +124,40 @@ const Home = () => {
         </Link>
       </Grid>
       <Link to='/loblolly'>
-      <Box
-          bgGradient="radial(circle, #a8d5ba, #6a8b74, #4a5d23, #2c3a2b)"
-          boxShadow="lg"
-          p={4}
-          width="400px"
-          height="400px"
-          clipPath="polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)"
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
+  <Box
+    bgGradient="radial(circle, #a8d5ba, #6a8b74, #4a5d23, #2c3a2b)"
+    boxShadow="lg"
+    p={4}
+    width="400px"
+    height="400px"
+    clipPath="polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)"
+    display="flex"
+    flexDirection="column"
+    justifyContent="center"
+    alignItems="center"
+    mt={10}
+  >
+    <Box
+      as="div"
+      width="auto"
+      overflow="hidden"
+      whiteSpace="nowrap"
+      borderRight="2px solid white"
+      display="inline-block"
+      animation={`${typing} 4s steps(40) 1s 1 normal both, ${blinkCaret} 0.75s step-end infinite`}
+    >
+      <Text
+        fontSize="xl"
+        fontFamily='Rakkas, cursive'
+        color='white'
+        display="inline-block"
       >
-      <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={4}>About Loblolly Pines</Text>
-      </Box>
-      </Link>
+        About Loblolly Pines
+      </Text>
+    </Box>
+  </Box>
+</Link>
+
     </Flex>
   );
 };
