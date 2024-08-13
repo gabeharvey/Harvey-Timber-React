@@ -9,6 +9,7 @@ import Home from '../components/Home.jsx'
 import Map from '../components/Map.jsx'
 import Timber from '../components/Timber.jsx'
 import MineralRights from '../components/MineralRights.jsx'
+import Loblolly from '../components/Loblolly.jsx'
 
 const router = createBrowserRouter ([
     { path: '/',
@@ -37,6 +38,10 @@ const router = createBrowserRouter ([
             {
                 path: 'mineralrights',
                 element: <MineralRights />
+            },
+            {
+                path: 'loblolly',
+                element: <Loblolly />
             },
         ]
     }
