@@ -57,9 +57,8 @@ const Home = () => {
         </Text>
       </Box>
       <Flex direction={['column', 'row']} spacing={10}>
+        <Link to='/timber'>
         <Box
-          as="button"
-          onClick={() => handleCardClick('')}
           bgImage="url('src/assets/loblolly-young-farm.jpg')"
           bgSize="cover"
           bgPos="center"
@@ -76,9 +75,9 @@ const Home = () => {
         >
           <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={80}>Timber</Text>
         </Box>
+        </Link>
+        <Link to='/mineralrights'>
         <Box
-          as="button"
-          onClick={() => handleCardClick('')}
           bgImage="url('src/assets/oil-rig-old-fashioned.jpg')"
           bgSize="cover"
           bgPos="center"
@@ -95,6 +94,7 @@ const Home = () => {
         >
           <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={80}>Mineral Rights</Text>
         </Box>
+        </Link>
       </Flex>
       <Link to='/map'>
       <Box
