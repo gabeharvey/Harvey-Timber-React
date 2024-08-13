@@ -1,4 +1,5 @@
-import { Box, Flex, Link, Button } from '@chakra-ui/react';
+import { Box, Flex, Button } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const Map = () => {
   return (
