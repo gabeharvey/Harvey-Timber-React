@@ -12,7 +12,7 @@ const MineralRights = () => {
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
       <Text fontSize="3xl" fontFamily='Rakkas, cursive' color='white' mb={10}>
-        Mineral Gallery
+        Mineral Rights
       </Text>
       <Flex direction={['column', 'row']} wrap="wrap" justify="center">
         {images.map((image, index) => (
@@ -38,7 +38,7 @@ const MineralRights = () => {
         ))}
       </Flex>
       <Link to='/'>
-        <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={10} textDecoration="underline">
+        <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={10}>
           Back to Home
         </Text>
       </Link>
