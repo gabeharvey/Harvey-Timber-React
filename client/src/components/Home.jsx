@@ -56,10 +56,10 @@ const Home = () => {
           {...loblollyBoxSize}
           display="flex"
           flexDirection="column"
-          justifyContent="flex-end"
+          justifyContent="flex-start"
           alignItems="center"
         >
-          <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mb={4}>Loblolly Pines</Text>
+          <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={4}>About Loblolly Pines</Text>
         </Box>
       </Link>
       <Grid
@@ -67,8 +67,11 @@ const Home = () => {
         gap={6} 
         mt={10}
         width="100%"
-        maxWidth="800px"  // Adjusted maxWidth to center the grid
-        justifyContent="center" // Centers the grid container
+        maxWidth="800px"
+        justifyContent="center"
+        alignItems="center"
+        textAlign="center"
+        p={4}
       >
         <Link to='/timber'>
           <Box
