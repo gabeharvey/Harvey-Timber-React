@@ -1,9 +1,12 @@
-import { Box, Flex, Button } from '@chakra-ui/react';
+import { Box, Flex, Text, Button } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 const Map = () => {
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
+      <Text fontSize="3xl" fontFamily='Rakkas, cursive' color='white' mb={10}>
+        Aerial Mapping
+      </Text>
       <Box
         bgImage="url('src/assets/harvey-farm-map.jpg')"
         bgSize="cover"
