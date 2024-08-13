@@ -18,11 +18,6 @@ const Home = () => {
     height: '400px'
   };
 
-  const loblollyBoxSize = {
-    width: '300px',
-    height: '400px'
-  };
-
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
       <Box
@@ -44,24 +39,6 @@ const Home = () => {
           Welcome to Harvey Timber
         </Text>
       </Box>
-      <Link to='/loblolly'>
-        <Box
-          bgImage={`url('/src/assets/loblolly-pine.jpg')`}
-          bgSize="cover"
-          bgPos="center"
-          boxShadow="lg"
-          p={4}
-          rounded="md"
-          m={2}
-          {...loblollyBoxSize}
-          display="flex"
-          flexDirection="column"
-          justifyContent="flex-start"
-          alignItems="center"
-        >
-          <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={4}>About Loblolly Pines</Text>
-        </Box>
-      </Link>
       <Grid
         templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)']} 
         gap={6} 
@@ -111,7 +88,7 @@ const Home = () => {
         </Link>
         <Link to='/wildlife'>
           <Box
-            bgImage="url('src/assets/deer.jpg')"
+            bgImage="url('src/assets/whitetail.jpg')"
             bgSize="cover"
             bgPos="center"
             boxShadow="md"
@@ -146,6 +123,22 @@ const Home = () => {
           </Box>
         </Link>
       </Grid>
+      <Link to='/loblolly'>
+      <Box
+          bgGradient="radial(circle, #a8d5ba, #6a8b74, #4a5d23, #2c3a2b)"
+          boxShadow="lg"
+          p={4}
+          width="400px"
+          height="400px"
+          clipPath="polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)"
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+      >
+      <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={4}>About Loblolly Pines</Text>
+      </Box>
+      </Link>
     </Flex>
   );
 };
