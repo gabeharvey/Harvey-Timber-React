@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, Button } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 const Timber = () => {
@@ -38,9 +38,18 @@ const Timber = () => {
         ))}
       </Flex>
       <Link to='/'>
-        <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mt={10} textDecoration="underline">
-          Back to Home
-        </Text>
+      <Button
+          mt={10}
+          bg='gray'
+          color='white'
+          fontFamily='Rakkas, cursive'
+          fontSize='xl'
+          _hover={{ bg: 'darkgray' }}
+          _active={{ bg: 'darkgray', transform: 'scale(0.98)' }}
+          _focus={{ boxShadow: 'outline' }}
+        >
+          Home
+        </Button>
       </Link>
     </Flex>
   );
