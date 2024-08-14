@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Flex, IconButton, Spacer, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Link } from '@chakra-ui/react';
+import { Box, Flex, IconButton, Spacer, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Link, Divider } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
@@ -64,7 +64,7 @@ const Navbar = () => {
               Wildlife
             </Link>
             <Link cursor="pointer" mr={3} href="/map">
-              Aerial Mapping
+              Map
             </Link>
             <Link cursor="pointer" mr={3} href="/loblolly">
               About Loblolly Pines
@@ -73,70 +73,78 @@ const Navbar = () => {
         </Box>
       )}
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay />
-        <DrawerContent
-          bg="#6C7C59"
+      <DrawerOverlay />
+      <DrawerContent
+        bg="#6C7C59"
+        color="white"
+        fontFamily="Rakkas, cursive"
+        _focus={{ outline: 'none', boxShadow: 'none' }}
+        _active={{ background: 'transparent' }}
+      >
+        <DrawerCloseButton
+          _hover={{ cursor: 'pointer' }}
+          mt="8px"
           color="white"
-          fontFamily="Rakkas, cursive"
           _focus={{ outline: 'none', boxShadow: 'none' }}
           _active={{ background: 'transparent' }}
-        >
-          <DrawerCloseButton
-            _hover={{ cursor: 'pointer' }}
-            mt="8px"
-            color="white"
-            _focus={{ outline: 'none', boxShadow: 'none' }}
-            _active={{ background: 'transparent' }}
-            sx={{
-              width: '40px',
-              height: '40px',
-              top: '4px',
-              '&::before, &::after': {
-                content: '""',
-                position: 'absolute',
-                width: '24px',
-                height: '4px',
-                bg: 'white',
-              },
-              '&::before': {
-                transform: 'rotate(45deg)',
-              },
-              '&::after': {
-                transform: 'rotate(-45deg)',
-              },
-            }}
-          />
-          <DrawerHeader borderBottom="3px solid white">Menu</DrawerHeader>
-          <DrawerBody>
-            <Flex direction="column">
-              <Link onClick={onClose} cursor="pointer" mb={4} href="/">
-                Home
-              </Link>
-              <Link onClick={onClose} cursor="pointer" mb={4} href="/signup">
-                Sign Up
-              </Link>
-              <Link onClick={onClose} cursor="pointer" mb={4} href="/login">
-                Log In
-              </Link>
-              <Link onClick={onClose} cursor="pointer" mb={4} href="/timber">
-                Timber
-              </Link>
-              <Link onClick={onClose} cursor="pointer" mb={4} href="/mineralrights">
-                Mineral Rights
-              </Link>
-              <Link onClick={onClose} cursor="pointer" mb={4} href="/wildlife">
-                Wildlife
-              </Link>
-              <Link onClick={onClose} cursor="pointer" mb={4} href="/map">
-                Map
-              </Link>
-              <Link onClick={onClose} cursor="pointer" mb={4} href="/loblolly">
-                About Loblolly Pines
-              </Link>
-            </Flex>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+          sx={{
+            width: '40px',
+            height: '40px',
+            top: '4px',
+            '&::before, &::after': {
+              content: '""',
+              position: 'absolute',
+              width: '24px',
+              height: '4px',
+              bg: 'white',
+            },
+            '&::before': {
+              transform: 'rotate(45deg)',
+            },
+            '&::after': {
+              transform: 'rotate(-45deg)',
+            },
+          }}
+        />
+        <DrawerHeader borderBottom="3px solid white">Menu</DrawerHeader>
+        <DrawerBody>
+          <Flex direction="column">
+            <Link onClick={onClose} cursor="pointer" mb={4} mt={4} href="/">
+              Home
+            </Link>
+
+            <Divider borderColor="white" borderWidth="2px" mb={4} />
+
+            <Link onClick={onClose} cursor="pointer" mb={4} href="/signup">
+              Sign Up
+            </Link>
+            <Link onClick={onClose} cursor="pointer" mb={4} href="/login">
+              Log In
+            </Link>
+
+            <Divider borderColor="white" borderWidth="2px" mb={4} />
+
+            <Link onClick={onClose} cursor="pointer" mb={4} href="/timber">
+              Timber
+            </Link>
+            <Link onClick={onClose} cursor="pointer" mb={4} href="/mineralrights">
+              Mineral Rights
+            </Link>
+            <Link onClick={onClose} cursor="pointer" mb={4} href="/wildlife">
+              Wildlife
+            </Link>
+            <Link onClick={onClose} cursor="pointer" mb={4} href="/map">
+              Map
+            </Link>
+            <Link onClick={onClose} cursor="pointer" mb={4} href="/loblolly">
+              About Loblolly Pines
+            </Link>
+
+            <Divider borderColor="white" borderWidth="2px" mb={4} />
+          </Flex>
+        </DrawerBody>
+      </DrawerContent>
+    </Drawer>
     </Flex>
   );
 };
