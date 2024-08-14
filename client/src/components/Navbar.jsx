@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Box, Flex, IconButton, Spacer, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Link, Divider } from '@chakra-ui/react';
+import { Box, Flex, IconButton, Spacer, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Link, Divider, Icon } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import { GiPineTree } from 'react-icons/gi';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -106,7 +107,7 @@ const Navbar = () => {
             },
           }}
         />
-        <DrawerHeader borderBottom="3px solid white">Menu</DrawerHeader>
+        <DrawerHeader borderBottom="3px solid white"><Icon as={GiPineTree} w={6} h={6} mr={2} />Menu</DrawerHeader>
         <DrawerBody>
           <Flex direction="column">
             <Link onClick={onClose} cursor="pointer" mb={4} mt={4} href="/">
