@@ -1,7 +1,18 @@
 import { Box, Flex, Text, Button } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import quotes from '../utils/quotes.json'
+import {useState, useEffect} from 'react'
 
 const Timber = () => {
+    const [randomQuote, setRandomQuote] = useState ('');
+    useEffect (() => {
+        const getRandomQuote = () => {
+            const randomIndex = Math.floor(Math.random () * quotes.length);
+            return quotes[randomIndex];
+        };
+        setRandomQuote (getRandomQuote ());
+    }, []);
+ 
   const images = [
     { src: '/src/assets/timber1.jpg', label: 'Timber View 1' },
     { src: '/src/assets/timber2.jpg', label: 'Timber View 2' },
@@ -11,6 +22,9 @@ const Timber = () => {
 
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
+        <Text fontSize='16px' fontFamily="Silkscreen, cursive" fontWeight='300' color='white' maxW="90%" mb="6">
+            {randomQuote.quote}
+        </Text>
       <Text fontSize="3xl" fontFamily='Rakkas, cursive' color='white' mb={10}>
         Timber Gallery
       </Text>
