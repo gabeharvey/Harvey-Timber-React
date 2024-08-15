@@ -39,7 +39,7 @@ const Wildlife = () => {
       </Flex>
       <Link to='/'>
         <Button
-          mt={9}
+          mt={10}
           bg='gray'
           color='white'
           fontFamily='Rakkas, cursive'
