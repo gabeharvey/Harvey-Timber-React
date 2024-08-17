@@ -46,28 +46,28 @@ const Navbar = () => {
       ) : (
         <Box display={{ base: 'none', md: 'block' }}>
           <Flex align="right" fontFamily="Rakkas, cursive" fontSize="15px" color="white">
-            <Link cursor="pointer" mr={4} href="/">
+            <Link cursor="pointer" mr={3} href="/">
               Home
             </Link>
-            <Link cursor="pointer" mr={4} href="/signup">
+            <Link cursor="pointer" mr={3} href="/signup">
               Sign Up
             </Link>
-            <Link cursor="pointer" mr={4} href="/login">
+            <Link cursor="pointer" mr={3} href="/login">
               Log In
             </Link>
-            <Link cursor="pointer" mr={4} href="/timber">
+            <Link cursor="pointer" mr={3} href="/timber">
               Timber
             </Link>
-            <Link cursor="pointer" mr={4} href="/mineralrights">
+            <Link cursor="pointer" mr={3} href="/mineralrights">
               Mineral Rights
             </Link>
-            <Link cursor="pointer" mr={4} href="/wildlife">
+            <Link cursor="pointer" mr={3} href="/wildlife">
               Wildlife
             </Link>
-            <Link cursor="pointer" mr={4} href="/map">
+            <Link cursor="pointer" mr={3} href="/map">
               Map
             </Link>
-            <Link cursor="pointer" mr={4} href="/loblolly">
+            <Link cursor="pointer" mr={3} href="/loblolly">
               About Loblolly Pines
             </Link>
           </Flex>
