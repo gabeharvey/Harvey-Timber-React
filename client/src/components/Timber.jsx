@@ -22,9 +22,6 @@ const Timber = () => {
 
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
-        <Text fontSize='16px' fontFamily="Silkscreen, cursive" fontWeight='300' color='white' maxW="90%" mb="6">
-            {randomQuote.quote}
-        </Text>
       <Text fontSize="3xl" fontFamily='Rakkas, cursive' color='white' mb={10}>
         Timber Gallery
       </Text>
@@ -65,6 +62,9 @@ const Timber = () => {
           Home
         </Button>
       </Link>
+      <Text fontSize='16px' fontFamily="Rakkas, cursive" fontWeight='300' color='white' maxW="90%" mb="6" mt="10">
+            {randomQuote.quote}
+      </Text>
     </Flex>
   );
 };

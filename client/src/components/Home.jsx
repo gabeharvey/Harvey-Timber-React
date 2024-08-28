@@ -1,5 +1,7 @@
 import { Box, Flex, Text, Grid, keyframes } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import quotes from '../utils/quotes.json'
+import {useState, useEffect} from 'react'
 
 const Home = () => {
   const typing = keyframes`
@@ -17,6 +19,15 @@ const Home = () => {
     height: '400px'
   };
 
+  const [randomQuote, setRandomQuote] = useState ('');
+    useEffect (() => {
+        const getRandomQuote = () => {
+            const randomIndex = Math.floor(Math.random () * quotes.length);
+            return quotes[randomIndex];
+        };
+        setRandomQuote (getRandomQuote ());
+    }, []);
+
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
       <Box
@@ -32,7 +43,7 @@ const Home = () => {
         <Text
           fontSize="2xl"
           color='white'
-          fontFamily='Silkscreen, cursive'
+          fontFamily='Rakkas, cursive'
           display="inline-block"
         >
           Welcome to Harvey Timber
@@ -141,7 +152,7 @@ const Home = () => {
             width="auto"
             overflow="hidden"
             whiteSpace="nowrap"
-            borderRight="2px solid transparent"  // Make caret invisible
+            borderRight="2px solid transparent"
             display="inline-block"
             animation={`${typing} 4s steps(40) 1s 1 normal both, ${blinkCaret} 0.75s step-end infinite`}
           >
@@ -156,6 +167,9 @@ const Home = () => {
           </Box>
         </Box>
       </Link>
+      <Text fontSize='16px' fontFamily="Rakkas, cursive" fontWeight='300' color='white' maxW="100%" mb="6">
+            {randomQuote.quote}
+      </Text>
     </Flex>
   );
 };
