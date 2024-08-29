@@ -36,7 +36,7 @@ const Wildlife = () => {
         Wildlife
       </Text>
       <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white' mb={10}>
-      Harvey Timber is a haven for a diverse range of wildlife. Explore the cards below to discover some of the most stunning animals that call our farm home. Click on each card to learn more about these beautiful creatures.
+      Harvey Timber is a haven for a diverse range of wildlife species. Explore the cards below to discover some of the most stunning animals that call our farm home. Click on each card to learn more about these beautiful creatures.
       </Text>
       <Flex direction={['column', 'row']} wrap="wrap" justify="center">
         {images.map((image, index) => {
