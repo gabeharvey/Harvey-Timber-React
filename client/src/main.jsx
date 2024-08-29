@@ -3,14 +3,14 @@ import App from './App.jsx'
 import './index.css'
 import {ChakraProvider} from '@chakra-ui/react';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import LogIn from '../components/LogIn.jsx';
-import SignUp from '../components/SignUp.jsx';
-import Home from '../components/Home.jsx'
-import Map from '../components/Map.jsx'
-import Timber from '../components/Timber.jsx'
-import MineralRights from '../components/MineralRights.jsx'
-import Loblolly from '../components/Loblolly.jsx'
-import Wildlife from '../components/Wildlife.jsx'
+import LogIn from './components/LogIn.jsx';
+import SignUp from './components/SignUp.jsx';
+import Home from './components/Home.jsx'
+import Map from './components/Map.jsx'
+import Timber from './components/Timber.jsx'
+import MineralRights from './components/MineralRights.jsx'
+import Loblolly from './components/Loblolly.jsx'
+import Wildlife from './components/Wildlife.jsx'
 
 const router = createBrowserRouter ([
     { path: '/',
