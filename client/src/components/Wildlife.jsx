@@ -24,10 +24,10 @@ const Wildlife = () => {
   );
 
   const images = [
-    { src: '/src/assets/wildlife1.jpg', label: 'Wildlife View 1' },
-    { src: '/src/assets/wildlife2.jpg', label: 'Wildlife View 2' },
-    { src: '/src/assets/wildlife3.jpg', label: 'Wildlife View 3' },
-    { src: '/src/assets/wildlife4.jpg', label: 'Wildlife View 4' },
+    { src: '/src/assets/whitetail-deer.jpg', label: 'Whitetail Deer' },
+    { src: '/src/assets/hummingbird.jpg', label: 'Ruby-Throated Hummingbird' },
+    { src: '/src/assets/turkey.jpg', label: 'Eastern Wild Turkey' },
+    { src: '/src/assets/fox.jpg', label: 'Fox' },
   ];
 
   return (
@@ -67,7 +67,6 @@ const Wildlife = () => {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   borderRadius: '10px',
-                  border: '3px solid white',
                   padding: '16px',
                   backgroundImage: `url(${image.src})`,
                   boxShadow: "black 5px 5px 5px",
@@ -75,7 +74,7 @@ const Wildlife = () => {
                 }}
               >
                 <Flex justify="center" align="center" height="100%">
-                  <Text fontSize="4xl" fontWeight='bold' fontFamily='Rakkas, cursive' color='white'>
+                  <Text fontSize="4xl" fontWeight='bold' fontFamily='Rakkas, cursive' color='transparent'>
                     {image.label}
                   </Text>
                 </Flex>
@@ -91,7 +90,6 @@ const Wildlife = () => {
                   backgroundPosition: 'center',
                   backgroundColor: 'darkgray',
                   borderRadius: '10px',
-                  border: '3px solid white',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
