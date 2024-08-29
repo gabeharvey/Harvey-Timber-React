@@ -35,6 +35,9 @@ const Wildlife = () => {
       <Text fontSize="3xl" fontFamily='Rakkas, cursive' color='white' mb={10}>
         Wildlife Gallery
       </Text>
+      <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white' mb={10}>
+      Harvey Timber is a haven for a diverse range of wildlife. Explore the cards below to discover some of the most stunning animals that call our farm home. Click on each card to learn more about these beautiful creatures.
+      </Text>
       <Flex direction={['column', 'row']} wrap="wrap" justify="center">
         {images.map((image, index) => {
           const { transform, boxShadow } = springProps[index];
@@ -96,14 +99,13 @@ const Wildlife = () => {
                   textAlign: 'center',
                   color: 'white',
                   fontSize: '1.2rem',
-                  fontFamily: "'Rakkas', cursive",
-                  fontWeight: 'bold',
+                  fontFamily: "'Chakra Petch', cursive",
                   boxShadow: "black 5px 5px 5px",
                   padding: '10px'
                 }}
               >
                 <div>
-                  <Text mb={3}>{image.label}</Text>
+                  <Text mb={3} fontWeight='bold'>{image.label}</Text>
                   <Text>{image.description}</Text>
                 </div>
               </animated.div>
