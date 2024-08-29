@@ -22,7 +22,7 @@ const Timber = () => {
 
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
-      <Text fontSize="3xl" fontFamily='Rakkas, cursive' color='white' mb={10}>
+      <Text fontSize="2xl" fontFamily='Chakra Petch, cursive' fontWeight='bold' color='white' mb={10}>
         Timber Gallery
       </Text>
       <Flex direction={['column', 'row']} wrap="wrap" justify="center">
@@ -42,7 +42,7 @@ const Timber = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white'>
+            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white'>
               {image.label}
             </Text>
           </Box>
@@ -53,7 +53,7 @@ const Timber = () => {
           mt={10}
           bg='gray'
           color='white'
-          fontFamily='Rakkas, cursive'
+          fontFamily='Chakra Petch, cursive'
           fontSize='xl'
           _hover={{ bg: 'darkgray' }}
           _active={{ bg: 'darkgray', transform: 'scale(0.98)' }}
@@ -62,7 +62,7 @@ const Timber = () => {
           Home
         </Button>
       </Link>
-      <Text fontSize='16px' fontFamily="Rakkas, cursive" fontWeight='300' color='white' maxW="90%" mb="6" mt="10">
+      <Text fontSize='16px' fontFamily="Chakra Petch, cursive" fontWeight='bold' color='white' maxW="90%" mb="6" mt="10">
             {randomQuote.quote}
       </Text>
     </Flex>

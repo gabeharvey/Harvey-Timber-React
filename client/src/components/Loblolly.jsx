@@ -11,8 +11,8 @@ const Loblolly = () => {
 
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
-      <Text fontSize="3xl" fontFamily='Rakkas, cursive' color='white' mb={10}>
-        Loblolly Pine Gallery
+      <Text fontSize="2xl" fontFamily='Chakra Petch, cursive' fontWeight='bold' color='white' mb={10}>
+        Loblolly Pines
       </Text>
       <Flex direction={['column', 'row']} wrap="wrap" justify="center">
         {images.map((image, index) => (
@@ -31,7 +31,7 @@ const Loblolly = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white'>
+            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white'>
               {image.label}
             </Text>
           </Box>
@@ -42,7 +42,7 @@ const Loblolly = () => {
           mt={10}
           bg='gray'
           color='white'
-          fontFamily='Rakkas, cursive'
+          fontFamily='Chakra Petch, cursive'
           fontSize='xl'
           _hover={{ bg: 'darkgray' }}
           _active={{ bg: 'darkgray', transform: 'scale(0.98)' }}

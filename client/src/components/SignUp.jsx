@@ -25,7 +25,7 @@ const SignUp = () => {
         width="300px"
         textAlign="left"
       >
-        <Text fontSize="2xl" color='#45503B' fontFamily='Rakkas, cursive' mb={5}>Sign Up</Text>
+        <Text fontSize="2xl" color='#45503B' fontFamily='Chakra Petch, cursive' fontWeight='bold' mb={5}>Sign Up</Text>
         <Input
           placeholder="Username"
           value={username}
