@@ -21,17 +21,17 @@ const MineralRights = () => {
             bgImage={`url(${image.src})`}
             bgSize="cover"
             bgPos="center"
-            boxShadow="md"
+            boxShadow="black 5px 5px 5px"
             p={4}
             rounded="md"
             m={4}
             width="300px"
-            height="200px"
+            height="400px"
             display="flex"
             justifyContent="center"
             alignItems="center"
           >
-            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white'>
+            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='transparent'>
               {image.label}
             </Text>
           </Box>

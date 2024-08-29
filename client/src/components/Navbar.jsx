@@ -28,7 +28,7 @@ const Navbar = () => {
       bgImage="linear-gradient(45deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent)"
       bgSize="5px 5px"
     >
-      <Box fontFamily="Special Elite, cursive" fontSize="30px" color="white" fontWeight='bold' p={1}>
+      <Box fontFamily="Special Elite, cursive" fontSize="30px" color="white" fontWeight='bold' p={3}>
         <Link cursor="pointer" href='/'>Harvey Timber</Link>
       </Box>
       <Spacer />
@@ -46,29 +46,29 @@ const Navbar = () => {
       ) : (
         <Box display={{ base: 'none', md: 'block' }}>
           <Flex align="right" fontFamily="Chakra Petch, cursive" fontSize="15px" color="white" fontWeight='bold'>
-            <Link cursor="pointer" mr={3} href="/">
+            <Link cursor="pointer" mr={6} href="/">
               Home
             </Link>
-            <Link cursor="pointer" mr={3} href="/signup">
+            <Link cursor="pointer" mr={6} href="/signup">
               Sign Up
             </Link>
-            <Link cursor="pointer" mr={3} href="/login">
+            <Link cursor="pointer" mr={6} href="/login">
               Log In
             </Link>
-            <Link cursor="pointer" mr={3} href="/timber">
+            <Link cursor="pointer" mr={6} href="/timber">
               Timber
             </Link>
-            <Link cursor="pointer" mr={3} href="/mineralrights">
+            <Link cursor="pointer" mr={6} href="/mineralrights">
               Mineral Rights
             </Link>
-            <Link cursor="pointer" mr={3} href="/wildlife">
+            <Link cursor="pointer" mr={6} href="/wildlife">
               Wildlife
             </Link>
-            <Link cursor="pointer" mr={3} href="/map">
+            <Link cursor="pointer" mr={6} href="/map">
               Map
             </Link>
-            <Link cursor="pointer" mr={3} href="/loblolly">
-              About Loblolly Pines
+            <Link cursor="pointer" mr={6} href="/loblolly">
+              Loblolly Pines
             </Link>
           </Flex>
         </Box>
@@ -139,7 +139,7 @@ const Navbar = () => {
               Map
             </Link>
             <Link onClick={onClose} cursor="pointer" mb={4} href="/loblolly">
-              About Loblolly Pines
+              Loblolly Pines
             </Link>
 
             <Divider borderColor="white" borderWidth="2px" mb={4} />

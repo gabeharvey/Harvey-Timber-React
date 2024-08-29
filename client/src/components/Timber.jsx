@@ -14,10 +14,16 @@ const Timber = () => {
     }, []);
  
   const images = [
-    { src: '/src/assets/timber1.jpg', label: 'Timber View 1' },
-    { src: '/src/assets/timber2.jpg', label: 'Timber View 2' },
-    { src: '/src/assets/timber3.jpg', label: 'Timber View 3' },
-    { src: '/src/assets/timber4.jpg', label: 'Timber View 4' },
+    { src: '/src/assets/timber-image-0.jpg', label: 'Timber View 0' },
+    { src: '/src/assets/timber-image-1.jpg', label: 'Timber View 1' },
+    { src: '/src/assets/timber-image-2.jpg', label: 'Timber View 2' },
+    { src: '/src/assets/timber-image-3.jpg', label: 'Timber View 3' },
+    { src: '/src/assets/timber-image-4.jpg', label: 'Timber View 4' },
+    { src: '/src/assets/timber-image-5.jpg', label: 'Timber View 5' },
+    { src: '/src/assets/timber-image-6.jpg', label: 'Timber View 6' },
+    { src: '/src/assets/timber-image-7.jpg', label: 'Timber View 7' },
+    { src: '/src/assets/timber-image-8.jpg', label: 'Timber View 8' },
+    { src: '/src/assets/timber-image-9.jpg', label: 'Timber View 9' }
   ];
 
   return (
@@ -32,17 +38,17 @@ const Timber = () => {
             bgImage={`url(${image.src})`}
             bgSize="cover"
             bgPos="center"
-            boxShadow="md"
+            boxShadow="black 5px 5px 5px"
             p={4}
             rounded="md"
             m={4}
             width="300px"
-            height="200px"
+            height="400px"
             display="flex"
             justifyContent="center"
             alignItems="center"
           >
-            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white'>
+            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='transparent'>
               {image.label}
             </Text>
           </Box>
