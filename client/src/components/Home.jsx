@@ -43,8 +43,9 @@ const Home = () => {
         <Text
           fontSize="2xl"
           color='white'
-          fontFamily='Rakkas, cursive'
+          fontFamily='Chakra Petch, cursive'
           display="inline-block"
+          fontWeight='bold'
         >
           Welcome to Harvey Timber
         </Text>
@@ -74,8 +75,9 @@ const Home = () => {
             flexDirection="column"
             justifyContent="flex-end"
             alignItems="center"
+            fontWeight='bold'
           >
-            <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mb={4}>Timber</Text>
+            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white' mb={4}>Timber</Text>
           </Box>
         </Link>
         <Link to='/mineralrights'>
@@ -92,8 +94,9 @@ const Home = () => {
             flexDirection="column"
             justifyContent="flex-end"
             alignItems="center"
+            fontWeight='bold'
           >
-            <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mb={4}>Mineral Rights</Text>
+            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white' mb={4}>Mineral Rights</Text>
           </Box>
         </Link>
         <Link to='/wildlife'>
@@ -110,8 +113,9 @@ const Home = () => {
             flexDirection="column"
             justifyContent="flex-end"
             alignItems="center"
+            fontWeight='bold'
           >
-            <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mb={4}>Wildlife</Text>
+            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white' mb={4}>Wildlife</Text>
           </Box>
         </Link>
         <Link to='/map'>
@@ -128,8 +132,9 @@ const Home = () => {
             flexDirection="column"
             justifyContent="flex-end"
             alignItems="center"
+            fontWeight='bold'
           >
-            <Text fontSize="xl" fontFamily='Rakkas, cursive' color='white' mb={4}>Aerial Mapping</Text>
+            <Text fontSize="xl" fontFamily='Chakra Petch, cursive' color='white' mb={4}>Aerial Mapping</Text>
           </Box>
         </Link>
       </Grid>
@@ -158,16 +163,18 @@ const Home = () => {
           >
             <Text
               fontSize="xl"
-              fontFamily='Rakkas, cursive'
+              fontFamily='Chakra Petch, cursive'
+              fontWeight='bold'
               color='white'
               display="inline-block"
+              mb='20px'
             >
               About Loblolly Pines
             </Text>
           </Box>
         </Box>
       </Link>
-      <Text fontSize='16px' fontFamily="Rakkas, cursive" fontWeight='300' color='white' maxW="100%" mb="6">
+      <Text fontSize='16px' fontFamily="Chakra Petch, cursive" fontWeight='bold' color='white' maxW="100%" mb="6">
             {randomQuote.quote}
       </Text>
     </Flex>

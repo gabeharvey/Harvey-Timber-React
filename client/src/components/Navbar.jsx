@@ -45,7 +45,7 @@ const Navbar = () => {
         />
       ) : (
         <Box display={{ base: 'none', md: 'block' }}>
-          <Flex align="right" fontFamily="Rakkas, cursive" fontSize="15px" color="white">
+          <Flex align="right" fontFamily="Chakra Petch, cursive" fontSize="15px" color="white" fontWeight='bold'>
             <Link cursor="pointer" mr={3} href="/">
               Home
             </Link>
@@ -78,7 +78,8 @@ const Navbar = () => {
       <DrawerContent
         bg="#6C7C59"
         color="white"
-        fontFamily="Rakkas, cursive"
+        fontFamily="Chakra Petch, cursive"
+        fontWeight='bold'
         _focus={{ outline: 'none', boxShadow: 'none' }}
         _active={{ background: 'transparent' }}
       >
