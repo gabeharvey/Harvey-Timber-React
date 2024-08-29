@@ -105,7 +105,7 @@ const Wildlife = () => {
                 }}
               >
                 <div>
-                  <Text mb={3} fontWeight='bold'>{image.label}</Text>
+                  <Text mb={4} fontWeight='bold'>{image.label}</Text>
                   <Text>{image.description}</Text>
                 </div>
               </animated.div>
