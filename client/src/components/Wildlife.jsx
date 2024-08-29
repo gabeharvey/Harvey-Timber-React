@@ -24,14 +24,14 @@ const Wildlife = () => {
   );
 
   const images = [
-    { src: '/src/assets/whitetail-deer.jpg', label: 'Whitetail Deer' },
-    { src: '/src/assets/hummingbird.jpg', label: 'Ruby-Throated Hummingbird' },
-    { src: '/src/assets/turkey.jpg', label: 'Eastern Wild Turkey' },
-    { src: '/src/assets/fox.jpg', label: 'Fox' },
+    { src: '/src/assets/whitetail-deer.jpg', label: 'Whitetail Deer', description: 'The whitetail deer is native to North America and known for its grace and agility.' },
+    { src: '/src/assets/hummingbird.jpg', label: 'Ruby-Throated Hummingbird', description: 'This small bird is known for its rapid wing beats and its ability to hover in place.' },
+    { src: '/src/assets/turkey.jpg', label: 'Eastern Wild Turkey', description: 'The Eastern wild turkey is one of the most popular game birds in the United States.' },
+    { src: '/src/assets/fox.jpg', label: 'Fox', description: 'Foxes are small to medium-sized omnivorous mammals belonging to several genera of the family Canidae.' },
   ];
 
   return (
-    <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#2E4E2A' p={5} textAlign="center">
+    <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
       <Text fontSize="3xl" fontFamily='Rakkas, cursive' color='white' mb={10}>
         Wildlife Gallery
       </Text>
@@ -88,20 +88,24 @@ const Wildlife = () => {
                   transform: 'rotateY(180deg)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  backgroundColor: 'darkgray',
+                  backgroundColor: '#1A1A1A',
                   borderRadius: '10px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   textAlign: 'center',
                   color: 'white',
-                  fontSize: '2.1rem',
+                  fontSize: '1.2rem',
                   fontFamily: "'Rakkas', cursive",
                   fontWeight: 'bold',
                   boxShadow: "black 5px 5px 5px",
+                  padding: '10px'
                 }}
               >
-                <Text>Back of Card {index + 1}</Text>
+                <div>
+                  <Text mb={3}>{image.label}</Text>
+                  <Text>{image.description}</Text>
+                </div>
               </animated.div>
             </animated.div>
           );
