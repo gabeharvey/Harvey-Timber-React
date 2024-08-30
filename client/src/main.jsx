@@ -1,4 +1,3 @@
-// src/index.js
 import ReactDOM from 'react-dom/client';
 import { ChakraProvider } from '@chakra-ui/react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -14,7 +13,6 @@ import Wildlife from './components/Wildlife.jsx';
 import PrivacyPolicy from './components/PrivacyPolicy.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
-
 
 const router = createBrowserRouter([
   {

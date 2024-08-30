@@ -4,15 +4,13 @@ import { AuthContext } from '../context/AuthContext.jsx';
 import PropTypes from 'prop-types';
 
 const PrivateRoute = ({ children }) => {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, loading } = useContext(AuthContext);
 
-  if (isAuthenticated) {
-    if (window.location.pathname === '/login' || window.location.pathname === '/signup') {
-      return <Navigate to="/" />;
-    }
-    return children;
+  if (loading) {
+    return <div>Loading...</div>;
   }
-  return <Navigate to="/login" />;
+
+  return isAuthenticated ? children : <Navigate to="/login" />;
 };
 
 PrivateRoute.propTypes = {

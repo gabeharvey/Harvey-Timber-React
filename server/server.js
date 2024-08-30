@@ -13,14 +13,17 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(cors({
   origin: 'http://localhost:5173',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -33,13 +36,12 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/harvey-ti
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-// Middleware to verify JWT token
 const authenticateJWT = (req, res, next) => {
   const token = req.headers['authorization']?.split(' ')[1];
-  if (token == null) return res.sendStatus(401);
+  if (!token) return res.sendStatus(401); 
 
   jwt.verify(token, JWT_SECRET, (err, user) => {
-    if (err) return res.sendStatus(403);
+    if (err) return res.sendStatus(403); 
     req.user = user;
     next();
   });
@@ -91,7 +93,16 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
-// Example protected route
+app.post('/api/verify-token', (req, res) => {
+  const { token } = req.body;
+  if (!token) return res.status(400).json({ valid: false });
+
+  jwt.verify(token, JWT_SECRET, (err) => {
+    if (err) return res.status(401).json({ valid: false });
+    res.status(200).json({ valid: true });
+  });
+});
+
 app.get('/api/protected', authenticateJWT, (req, res) => {
   res.status(200).json({ message: 'This is a protected route', user: req.user });
 });
