@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const SignUp = () => {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSignup = async () => {
@@ -30,6 +31,13 @@ const SignUp = () => {
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          mb={3}
+          borderColor="#45503B"
+        />
+        <Input
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           mb={3}
           borderColor="#45503B"
         />
