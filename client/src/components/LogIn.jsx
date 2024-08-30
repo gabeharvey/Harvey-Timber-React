@@ -8,10 +8,10 @@ const LogIn = () => {
 
   const handleLogin = async () => {
     try {
-      await axios.post('/api/login', { username, password });
-      alert('Login successful');
+      const response = await axios.post('http://localhost:5000/api/login', { username, password });
+      alert(response.data.message);
     } catch (error) {
-      alert('Error logging in');
+      alert('Error logging in: ' + error.response?.data?.message || 'Unknown error');
     }
   };
 
@@ -48,7 +48,7 @@ const LogIn = () => {
           _hover={{ bg: "blue.600" }}
           width="100%"
         >
-          LogIn
+          Log In
         </Button>
       </Box>
     </Flex>

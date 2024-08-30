@@ -8,7 +8,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import bcrypt from 'bcryptjs';
 
-// Load environment variables
 dotenv.config();
 
 const app = express();
@@ -17,7 +16,6 @@ const PORT = process.env.PORT || 5000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Middleware
 app.use(cors({
   origin: 'http://localhost:5173',
 }));
@@ -26,7 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 console.log('MongoDB URI:', process.env.MONGODB_URI);
 
-// Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/harvey-timber', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -34,7 +31,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/harvey-ti
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-// Routes
 app.get('/', (req, res) => {
   res.send('Server is running');
 });
@@ -56,8 +52,30 @@ app.post('/api/signup', async (req, res) => {
   }
 });
 
-// Start server
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    if (!username || !password) {
+      return res.status(400).json({ message: 'Username and password are required' });
+    }
+
+    const user = await User.findOne({ username });
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+
+    res.status(200).json({ message: 'Login successful' });
+  } catch (error) {
+    console.error('Error logging in:', error);
+    res.status(500).json({ message: 'Error logging in', error: error.message });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
