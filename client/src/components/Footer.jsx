@@ -23,7 +23,7 @@ const Footer = () => {
           <Link href="/contact" mr={3} _hover={{ textDecoration: 'underline' }}>
             Contact
           </Link>
-          <Link href="/privacy" _hover={{ textDecoration: 'underline' }}>
+          <Link href="/privacypolicy" _hover={{ textDecoration: 'underline' }}>
             Privacy Policy
           </Link>
         </Box>

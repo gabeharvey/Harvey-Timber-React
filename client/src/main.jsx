@@ -11,8 +11,10 @@ import Timber from './components/Timber.jsx';
 import MineralRights from './components/MineralRights.jsx';
 import Loblolly from './components/Loblolly.jsx';
 import Wildlife from './components/Wildlife.jsx';
+import PrivacyPolicy from './components/PrivacyPolicy.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
-import { AuthProvider } from './context/AuthContext.jsx'; // Ensure correct import path
+import { AuthProvider } from './context/AuthContext.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -59,6 +61,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Wildlife />
+          </PrivateRoute>
+        )
+      },
+      {
+        path: 'privacypolicy',
+        element: (
+          <PrivateRoute>
+            <PrivacyPolicy />
           </PrivateRoute>
         )
       }

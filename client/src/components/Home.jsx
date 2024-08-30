@@ -66,7 +66,6 @@ const Home = () => {
             bgImage="url('src/assets/loblolly-young-farm.jpg')"
             bgSize="cover"
             bgPos="center"
-            boxShadow="black 5px 5px 5px"
             p={4}
             rounded="md"
             m={2}
@@ -85,7 +84,6 @@ const Home = () => {
             bgImage="url('src/assets/oil-rig-old-fashioned.jpg')"
             bgSize="cover"
             bgPos="center"
-            boxShadow="black 5px 5px 5px"
             p={4}
             rounded="md"
             m={2}
@@ -104,7 +102,6 @@ const Home = () => {
             bgImage="url('src/assets/whitetail.jpg')"
             bgSize="cover"
             bgPos="center"
-            boxShadow="black 5px 5px 5px"
             p={4}
             rounded="md"
             m={2}
@@ -123,7 +120,6 @@ const Home = () => {
             bgImage="url('src/assets/aerial-mapping.jpg')"
             bgSize="cover"
             bgPos="center"
-            boxShadow="black 5px 5px 5px"
             p={4}
             rounded="md"
             m={2}
