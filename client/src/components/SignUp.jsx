@@ -54,7 +54,7 @@ const SignUp = () => {
           onClick={handleSignup}
           bg="#45503B"
           color="white"
-          _hover={{ bg: "#3A3F2B" }} // Updated hover color to match theme
+          _hover={{ bg: "#3A3F2B" }} 
           width="100%"
         >
           Sign Up
