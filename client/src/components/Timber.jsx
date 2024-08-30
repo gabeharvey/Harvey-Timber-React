@@ -50,7 +50,6 @@ const Timber = () => {
               bgImage={`url(${image.src})`}
               bgSize="cover"
               bgPos="center"
-              
               p={4}
               rounded="lg"
               height="400px"
