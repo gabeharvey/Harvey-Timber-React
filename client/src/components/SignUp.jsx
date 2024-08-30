@@ -12,9 +12,10 @@ const SignUp = () => {
       await axios.post('/api/signup', { username, email, password });
       alert('Signup successful');
     } catch (error) {
+      console.error('Error signing up:', error);
       alert('Error signing up');
     }
-  };  
+  };
 
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
