@@ -1,22 +1,28 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Box, Flex, Input, Button, Text } from '@chakra-ui/react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 const SignUp = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignup = async () => {
     try {
-      await axios.post('http://localhost:5000/api/signup', { username, email, password });
+      const response = await axios.post('http://localhost:5000/api/signup', { username, email, password });
+      login(response.data.token);
       alert('Signup successful');
+      navigate('/');
     } catch (error) {
       console.error('Error signing up:', error);
-      alert('Error signing up');
+      alert('Error signing up: ' + (error.response?.data?.message || 'Unknown error'));
     }
   };
-  
+
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
       <Box
@@ -54,7 +60,7 @@ const SignUp = () => {
           onClick={handleSignup}
           bg="#45503B"
           color="white"
-          _hover={{ bg: "#3A3F2B" }} 
+          _hover={{ bg: "#3A3F2B" }}
           width="100%"
         >
           Sign Up

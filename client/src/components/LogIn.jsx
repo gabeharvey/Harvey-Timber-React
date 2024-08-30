@@ -1,17 +1,25 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Box, Flex, Input, Button, Text } from '@chakra-ui/react';
 import axios from 'axios';
+import { AuthContext } from '../context/AuthContext.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
       const response = await axios.post('http://localhost:5000/api/login', { username, password });
-      alert(response.data.message);
+      const token = response.data.token;
+      localStorage.setItem('authToken', token);
+      login(token);
+      navigate('/');
     } catch (error) {
-      alert('Error logging in: ' + error.response?.data?.message || 'Unknown error');
+      console.error('Error logging in:', error);
+      alert('Error logging in');
     }
   };
 
@@ -25,7 +33,7 @@ const LogIn = () => {
         width="300px"
         textAlign="left"
       >
-        <Text fontSize="2xl" color='#45503B' fontFamily='Chakra Petch, cursive' fontWeight='bold' mb={4}>Login</Text>
+        <Text fontSize="2xl" color='#45503B' fontFamily='Chakra Petch, cursive' fontWeight='bold' mb={5}>Log In</Text>
         <Input
           placeholder="Username"
           value={username}
@@ -45,7 +53,7 @@ const LogIn = () => {
           onClick={handleLogin}
           bg="#45503B"
           color="white"
-          _hover={{ bg: "blue.600" }}
+          _hover={{ bg: "#3A3F2B" }} 
           width="100%"
         >
           Log In
