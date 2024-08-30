@@ -34,6 +34,8 @@ const Navbar = () => {
     fontSize: '15px',
     fontWeight: 'bold',
     _hover: { textDecoration: 'underline' },
+    marginBottom: '15px',
+    marginTop: '15px'
   };
 
   return (
@@ -120,7 +122,7 @@ const Navbar = () => {
               },
             }}
           />
-          <DrawerHeader borderBottom="3px solid white"><Icon as={GiPineTree} w={6} h={6} mr={2} />Menu</DrawerHeader>
+          <DrawerHeader borderBottom="4px solid white"><Icon as={GiPineTree} w={6} h={6} mr={2} />Menu</DrawerHeader>
           <DrawerBody>
             <Flex direction="column">
               <Link onClick={onClose} to="/" style={linkStyle}>Home</Link>
@@ -131,8 +133,23 @@ const Navbar = () => {
                   <Link onClick={onClose} to="/wildlife" style={linkStyle}>Wildlife</Link>
                   <Link onClick={onClose} to="/map" style={linkStyle}>Map</Link>
                   <Link onClick={onClose} to="/loblolly" style={linkStyle}>Loblolly Pines</Link>
-                  <Divider borderColor="white" borderWidth="2px" mb={4} />
-                  <Button onClick={handleLogout} variant="link" style={linkStyle}>Logout</Button>
+                  <Divider borderColor="white" borderWidth="2px" borderStyle="solid" mb={4} mt={4}/>
+                  <Button
+                    onClick={handleLogout}
+                    variant="solid"
+                    color="white"
+                    bg="transparent"
+                    border="3px solid white"
+                    _hover={{ bg: "whiteAlpha.300" }}
+                    _active={{ bg: "whiteAlpha.500" }}
+                    _focus={{ boxShadow: "0 0 0 3px rgba(255, 255, 255, 0.6)" }}
+                    p={4}
+                    borderRadius="md"
+                    mt={4}
+                  >
+                    Logout
+                  </Button>
+
                 </>
               ) : (
                 <>
