@@ -11,6 +11,8 @@ import MineralRights from './components/MineralRights.jsx';
 import Loblolly from './components/Loblolly.jsx';
 import Wildlife from './components/Wildlife.jsx';
 import PrivacyPolicy from './components/PrivacyPolicy.jsx';
+import Contact from './components/Contact.jsx';
+import AboutUs from './components/AboutUs.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 
@@ -67,6 +69,22 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <PrivacyPolicy />
+          </PrivateRoute>
+        )
+      },
+      {
+        path: 'contact',
+        element: (
+          <PrivateRoute>
+            <Contact />
+          </PrivateRoute>
+        )
+      },
+      {
+        path: 'about',
+        element: (
+          <PrivateRoute>
+            <AboutUs />
           </PrivateRoute>
         )
       }
