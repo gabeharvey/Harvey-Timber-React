@@ -24,8 +24,10 @@ app.use(cors({
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+console.log('MongoDB URI:', process.env.MONGODB_URI);
+
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/default-database', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/harvey-timber', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

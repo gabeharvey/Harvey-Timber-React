@@ -9,14 +9,14 @@ const SignUp = () => {
 
   const handleSignup = async () => {
     try {
-      await axios.post('/api/signup', { username, email, password });
+      await axios.post('http://localhost:5000/api/signup', { username, email, password });
       alert('Signup successful');
     } catch (error) {
       console.error('Error signing up:', error);
       alert('Error signing up');
     }
   };
-
+  
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
       <Box
@@ -54,7 +54,7 @@ const SignUp = () => {
           onClick={handleSignup}
           bg="#45503B"
           color="white"
-          _hover={{ bg: "blue.600" }}
+          _hover={{ bg: "#3A3F2B" }} // Updated hover color to match theme
           width="100%"
         >
           Sign Up

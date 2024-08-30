@@ -4,8 +4,9 @@
     "version": "1.0.0",
     "type": "module",
     "scripts": {
-        "seed": "node server/seeds/dates.js",
-        "start": "node server/server.js",
+        "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+        "start:server": "cd server && npm start",
+        "start:client": "cd client && npm run dev",
         "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
         "install": "cd server && npm i && cd ../client && npm i",
         "build": "cd client && npm run build",
@@ -15,6 +16,6 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "concurrently": "^5.1.0"
+        "concurrently": "^8.0.0"
     }
 }
