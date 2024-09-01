@@ -43,7 +43,7 @@ const Navbar = () => {
       as="nav"
       align="center"
       justify="space-between"
-      padding="4px"
+      padding="5px"
       bg="#6C7C59"
       height="80px"
       bgImage="linear-gradient(45deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent)"
