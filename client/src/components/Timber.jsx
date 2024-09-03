@@ -153,7 +153,7 @@ const Timber = () => {
           Home
         </Button>
       </Link>
-      <Text fontSize='16px' fontFamily="Chakra Petch, cursive" fontWeight='bold' color='white' maxW="90%" mb="6" mt="10">
+      <Text fontSize='15px' fontFamily="Chakra Petch, cursive" fontWeight='bold' color='white' maxW="90%" mb="6" mt="10">
         {randomQuote.quote}
       </Text>
     </Flex>
