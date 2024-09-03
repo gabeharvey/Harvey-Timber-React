@@ -49,7 +49,7 @@ const Navbar = () => {
       bgImage="linear-gradient(45deg, #333 25%, transparent 25%, transparent 50%, #333 50%, #333 75%, transparent 75%, transparent)"
       bgSize="5px 5px"
     >
-      <Box fontFamily="Special Elite, cursive" fontSize="30px" color="white" fontWeight='bold' p={3}>
+      <Box fontFamily="Special Elite, cursive" fontSize="30px" color="white" fontWeight='bold' p={3} marginTop='8px'>
         <Link to='/'>Harvey Timber</Link>
       </Box>
       <Spacer />
