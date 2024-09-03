@@ -4,6 +4,8 @@ import axios from 'axios';
 import { AuthContext } from '../context/AuthContext.jsx';
 import { useNavigate } from 'react-router-dom';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const LogIn = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -12,14 +14,14 @@ const LogIn = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/login', { username, password });
+      const response = await axios.post(`${API_URL}/api/login`, { username, password });
       const token = response.data.token;
       localStorage.setItem('authToken', token);
       login(token);
       navigate('/');
     } catch (error) {
       console.error('Error logging in:', error);
-      alert('Error logging in');
+      alert('Error logging in: ' + (error.response?.data?.message || 'Unknown error'));
     }
   };
 

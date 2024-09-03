@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const SignUp = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -13,7 +15,7 @@ const SignUp = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/signup', { username, email, password });
+      const response = await axios.post(`${API_URL}/api/signup`, { username, email, password });
       login(response.data.token);
       alert('Signup successful');
       navigate('/');
