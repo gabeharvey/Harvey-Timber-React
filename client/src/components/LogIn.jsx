@@ -15,6 +15,8 @@ const LogIn = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(`${API_URL}/api/login`, { username, password });
+      console.log('Login response:', response.data);
+      localStorage.setItem('authToken', response.data.token);
       const token = response.data.token;
       localStorage.setItem('authToken', token);
       login(token);

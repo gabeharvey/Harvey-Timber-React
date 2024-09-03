@@ -16,6 +16,8 @@ const SignUp = () => {
   const handleSignup = async () => {
     try {
       const response = await axios.post(`${API_URL}/api/signup`, { username, email, password });
+      console.log('Signup response:', response.data);
+      localStorage.setItem('authToken', response.data.token);
       login(response.data.token);
       alert('Signup successful');
       navigate('/');
