@@ -32,7 +32,7 @@ This project was done by Martin "Gabe" Harvey who is a rising star in the coding
 ## Screenshots
 
 Main Screenshot:
-![Alt Text](./client/src/assets/main-screen.png)
+![Alt Text](./client/public/main-screen.png)
 
 ## Video
 
