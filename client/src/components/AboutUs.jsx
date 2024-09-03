@@ -76,12 +76,12 @@ import {
           <Link to='/'>
             <Button
               mt={10}
-              bg='gray.500'
+              bg='gray'
               color='white'
               fontFamily='Chakra Petch, cursive'
               fontSize='xl'
-              _hover={{ bg: 'gray.600' }}
-              _active={{ bg: 'gray.600', transform: 'scale(0.98)' }}
+              _hover={{ bg: 'darkgray' }}
+              _active={{ bg: 'darkgray', transform: 'scale(0.98)' }}
               _focus={{ boxShadow: 'outline' }}
             >
               Home
