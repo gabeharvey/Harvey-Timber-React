@@ -24,10 +24,10 @@ const MineralRights = () => {
   );
 
   const images = [
-    { src: '/src/assets/oil-image-0.jpg', label: 'Site Prep', description: 'Preparation of the site for drilling activities.' },
-    { src: '/src/assets/oil-image-1.jpg', label: 'Drilling', description: 'Drilling into the ground to reach the oil reserves.' },
-    { src: '/src/assets/oil-image-2.jpg', label: 'Production', description: 'Extracting oil and gas from the well.' },
-    { src: '/src/assets/oil-image-3.jpg', label: 'Abandonment', description: 'Properly closing and abandoning the well site.' },
+    { src: 'public/oil-image-0.jpg', label: 'Site Prep', description: 'Preparation of the site for drilling activities.' },
+    { src: 'public/oil-image-1.jpg', label: 'Drilling', description: 'Drilling into the ground to reach the oil reserves.' },
+    { src: 'public/oil-image-2.jpg', label: 'Production', description: 'Extracting oil and gas from the well.' },
+    { src: 'public/oil-image-3.jpg', label: 'Abandonment', description: 'Properly closing and abandoning the well site.' },
   ];
 
   return (
