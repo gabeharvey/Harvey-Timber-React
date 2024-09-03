@@ -25,6 +25,17 @@ const SignUp = () => {
     }
   };
 
+  const linkStyle = {
+    cursor: 'pointer',
+    color: 'white',
+    fontFamily: 'Chakra Petch, cursive',
+    fontSize: '15px',
+    fontWeight: 'bold',
+    _hover: { textDecoration: 'underline' },
+    marginBottom: '15px',
+    marginTop: '15px'
+  };
+
   return (
     <Flex direction="column" align="center" justify="center" minHeight="100vh" bg='#45503B' p={5} textAlign="center">
       <Box
@@ -70,8 +81,8 @@ const SignUp = () => {
       </Box>
       <Text fontSize="lg" color="white" fontFamily='Chakra Petch, cursive' mt={50}>
         Already a member?{' '}
-        <Link color="white" fontWeight='bold' href="/login">
-          LogIn
+        <Link style={linkStyle} href="/login">
+          Log In
         </Link>{' '}
         to access <Text fontFamily='Special Elite, cursive'>Harvey Timber.</Text>
       </Text>
