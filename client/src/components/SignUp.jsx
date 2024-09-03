@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { Box, Flex, Input, Button, Text } from '@chakra-ui/react';
+import { Box, Flex, Input, Button, Text, Link } from '@chakra-ui/react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
@@ -68,6 +68,13 @@ const SignUp = () => {
           Sign Up
         </Button>
       </Box>
+      <Text fontSize="lg" color="white" fontFamily='Chakra Petch, cursive' mt={50}>
+        Already a member?{' '}
+        <Link color="white" fontWeight='bold' href="/login">
+          LogIn
+        </Link>{' '}
+        to access <Text fontFamily='Special Elite, cursive'>Harvey Timber.</Text>
+      </Text>
     </Flex>
   );
 };

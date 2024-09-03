@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from 'react';
 import { Box, Flex, IconButton, Spacer, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Divider, Icon, Button } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import { GiPineTree } from 'react-icons/gi';
+import { GiCompass } from 'react-icons/gi';
 import { AuthContext } from '../context/AuthContext.jsx';
 import { useNavigate, Link } from 'react-router-dom';
 
@@ -122,7 +122,7 @@ const Navbar = () => {
               },
             }}
           />
-          <DrawerHeader borderBottom="4px solid white"><Icon as={GiPineTree} w={6} h={6} mr={2} />Menu</DrawerHeader>
+          <DrawerHeader borderBottom="4px solid white"><Icon as={GiCompass} w={7} h={6} mr={4}/>Menu</DrawerHeader>
           <DrawerBody>
             <Flex direction="column">
               <Link onClick={onClose} to="/" style={linkStyle}>Home</Link>
