@@ -36,7 +36,6 @@ app.use(cors({
   credentials: true,
 }));
 
-
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -118,6 +117,38 @@ app.post('/api/verify-token', (req, res) => {
 
 app.get('/api/protected', authenticateJWT, (req, res) => {
   res.status(200).json({ message: 'This is a protected route', user: req.user });
+});
+
+app.get('/map', (req, res) => {
+  res.status(200).json({ message: 'Map data' });
+});
+
+app.get('/timber', (req, res) => {
+  res.status(200).json({ message: 'Timber data' });
+});
+
+app.get('/mineralrights', (req, res) => {
+  res.status(200).json({ message: 'Mineral Rights data' });
+});
+
+app.get('/loblolly', (req, res) => {
+  res.status(200).json({ message: 'Loblolly Pines data' });
+});
+
+app.get('/wildlife', (req, res) => {
+  res.status(200).json({ message: 'Wildlife data' });
+});
+
+app.get('/privacypolicy', (req, res) => {
+  res.status(200).json({ message: 'Privacy Policy data' });
+});
+
+app.get('/contact', (req, res) => {
+  res.status(200).json({ message: 'Contact data' });
+});
+
+app.get('/about', (req, res) => {
+  res.status(200).json({ message: 'About Us data' });
 });
 
 app.get('*', (req, res) => {
