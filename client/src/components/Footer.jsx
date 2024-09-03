@@ -1,4 +1,7 @@
+import { useContext } from 'react';
 import { Box, Flex, Link, Text } from '@chakra-ui/react';
+import { AuthContext } from '../context/AuthContext.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const linkStyle = {
   cursor: 'pointer',
@@ -13,6 +16,17 @@ const linkStyle = {
 };
 
 const Footer = () => {
+  const { isAuthenticated } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    if (!isAuthenticated) {
+      navigate('/login');
+    } else {
+      navigate(path);
+    }
+  };
+
   return (
     <Flex
       as="footer"
@@ -29,13 +43,13 @@ const Footer = () => {
     >
       <Flex direction="column" align="center">
         <Box>
-          <Link href="/about" style={linkStyle}>
+          <Link onClick={() => handleLinkClick('/about')} style={linkStyle}>
             About Us
           </Link>
-          <Link href="/contact" style={linkStyle}>
+          <Link onClick={() => handleLinkClick('/contact')} style={linkStyle}>
             Contact
           </Link>
-          <Link href="/privacypolicy" style={linkStyle}>
+          <Link onClick={() => handleLinkClick('/privacypolicy')} style={linkStyle}>
             Privacy Policy
           </Link>
         </Box>
