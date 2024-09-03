@@ -65,7 +65,7 @@ import {
               </Box>
             </Stack>
             <Image
-              src="../src/assets/head-guy.jpg"
+              src="/head-guy.jpg"
               alt="About Us Image"
               borderRadius="md"
               boxSize={isMobile ? "100%" : "auto"}
