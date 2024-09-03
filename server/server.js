@@ -18,8 +18,19 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://harvey-timber.onrender.com',
+];
+
 app.use(cors({
-  origin: 'https://harvey-timber.onrender.com',
+  origin: function(origin, callback){
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
