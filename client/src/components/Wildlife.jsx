@@ -24,10 +24,10 @@ const Wildlife = () => {
   );
 
   const images = [
-    { src: 'public/whitetail-deer.jpg', label: 'Whitetail Deer', description: 'The whitetail deer is native to North America and known for its grace and agility.' },
-    { src: 'public/hummingbird.jpg', label: 'Ruby-Throated Hummingbird', description: 'This small bird is known for its rapid wing beats and its ability to hover in place.' },
-    { src: 'public/turkey.jpg', label: 'Eastern Wild Turkey', description: 'The Eastern wild turkey is one of the most popular game birds in the United States.' },
-    { src: 'public/fox.jpg', label: 'Fox', description: 'Foxes are small to medium-sized omnivorous mammals belonging to several genera of the family Canidae.' },
+    { src: 'whitetail-deer.jpg', label: 'Whitetail Deer', description: 'The whitetail deer is native to North America and known for its grace and agility.' },
+    { src: 'hummingbird.jpg', label: 'Ruby-Throated Hummingbird', description: 'This small bird is known for its rapid wing beats and its ability to hover in place.' },
+    { src: 'turkey.jpg', label: 'Eastern Wild Turkey', description: 'The Eastern wild turkey is one of the most popular game birds in the United States.' },
+    { src: 'fox.jpg', label: 'Fox', description: 'Foxes are small to medium-sized omnivorous mammals belonging to several genera of the family Canidae.' },
   ];
 
   return (

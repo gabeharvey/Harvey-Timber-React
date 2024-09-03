@@ -8,7 +8,7 @@ const Map = () => {
         Aerial Mapping
       </Text>
       <Box
-        bgImage="url('public/harvey-farm-map.jpg')"
+        bgImage="url('harvey-farm-map.jpg')"
         bgSize="cover"
         bgPos="center"
         boxShadow="md"

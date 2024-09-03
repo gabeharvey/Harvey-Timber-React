@@ -63,7 +63,7 @@ const Home = () => {
       >
         <Link to='/timber'>
           <Box
-            bgImage="url('public/loblolly-young-farm.jpg')"
+            bgImage="url('loblolly-young-farm.jpg')"
             bgSize="cover"
             bgPos="center"
             p={4}
@@ -81,7 +81,7 @@ const Home = () => {
         </Link>
         <Link to='/mineralrights'>
           <Box
-            bgImage="url('public/oil-rig-old-fashioned.jpg')"
+            bgImage="url('oil-rig-old-fashioned.jpg')"
             bgSize="cover"
             bgPos="center"
             p={4}
@@ -99,7 +99,7 @@ const Home = () => {
         </Link>
         <Link to='/wildlife'>
           <Box
-            bgImage="url('public/whitetail.jpg')"
+            bgImage="url('whitetail.jpg')"
             bgSize="cover"
             bgPos="center"
             p={4}
@@ -117,7 +117,7 @@ const Home = () => {
         </Link>
         <Link to='/map'>
           <Box
-            bgImage="url('public/aerial-mapping.jpg')"
+            bgImage="url('aerial-mapping.jpg')"
             bgSize="cover"
             bgPos="center"
             p={4}

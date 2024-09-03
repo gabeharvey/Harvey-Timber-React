@@ -77,16 +77,16 @@ const Timber = () => {
   }, []);
 
   const images = [
-    { src: 'public/timber-image-0.jpg', label: 'Timber View 0' },
-    { src: 'public/timber-image-1.jpg', label: 'Timber View 1' },
-    { src: 'public/timber-image-2.jpg', label: 'Timber View 2' },
-    { src: 'public/timber-image-3.jpg', label: 'Timber View 3' },
-    { src: 'public/timber-image-4.jpg', label: 'Timber View 4' },
-    { src: 'public/timber-image-5.jpg', label: 'Timber View 5' },
-    { src: 'public/timber-image-6.jpg', label: 'Timber View 6' },
-    { src: 'public/timber-image-7.jpg', label: 'Timber View 7' },
-    { src: 'public/timber-image-8.jpg', label: 'Timber View 8' },
-    { src: 'public/timber-image-9.jpg', label: 'Timber View 9' }
+    { src: 'timber-image-0.jpg', label: 'Timber View 0' },
+    { src: 'timber-image-1.jpg', label: 'Timber View 1' },
+    { src: 'timber-image-2.jpg', label: 'Timber View 2' },
+    { src: 'timber-image-3.jpg', label: 'Timber View 3' },
+    { src: 'timber-image-4.jpg', label: 'Timber View 4' },
+    { src: 'timber-image-5.jpg', label: 'Timber View 5' },
+    { src: 'timber-image-6.jpg', label: 'Timber View 6' },
+    { src: 'timber-image-7.jpg', label: 'Timber View 7' },
+    { src: 'timber-image-8.jpg', label: 'Timber View 8' },
+    { src: 'timber-image-9.jpg', label: 'Timber View 9' }
   ];
 
   const settings = {
