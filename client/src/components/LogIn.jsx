@@ -9,7 +9,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 const LogIn = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { login, isAuthenticated } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -26,16 +26,9 @@ const LogIn = () => {
   };
 
   const handleLinkClick = (path) => {
-    if (path === '/signup') {
-      navigate(path);
-    } else {
-      if (!isAuthenticated) {
-        navigate('/login');
-      } else {
-        navigate(path);
-      }
-    }
+    navigate(path);
   };
+  
 
   const linkStyle = {
     cursor: 'pointer',

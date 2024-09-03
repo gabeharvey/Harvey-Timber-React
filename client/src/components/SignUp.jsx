@@ -10,7 +10,7 @@ const SignUp = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login, isAuthenticated } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSignup = async () => {
@@ -26,12 +26,9 @@ const SignUp = () => {
   };
 
   const handleLinkClick = (path) => {
-    if (!isAuthenticated) {
-      navigate('/login');
-    } else {
-      navigate(path);
-    }
+    navigate(path);
   };
+  
 
   const linkStyle = {
     cursor: 'pointer',
