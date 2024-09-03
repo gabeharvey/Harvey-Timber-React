@@ -24,10 +24,10 @@ const Loblolly = () => {
   );
 
   const images = [
-    { src: '/src/assets/loblolly-image-0.jpg', label: 'Stage 1', description: 'Seedling' },
-    { src: '/src/assets/loblolly-image-1.jpg', label: 'Stage 2', description: 'Young Tree' },
-    { src: '/src/assets/loblolly-image-2.jpg', label: 'Stage 3', description: 'Mature Tree' },
-    { src: '/src/assets/loblolly-image-3.jpg', label: 'Stage 4', description: 'Fully Grown Tree' },
+    { src: 'public/loblolly-image-0.jpg', label: 'Stage 1', description: 'Seedling' },
+    { src: 'public/loblolly-image-1.jpg', label: 'Stage 2', description: 'Young Tree' },
+    { src: 'public/loblolly-image-2.jpg', label: 'Stage 3', description: 'Mature Tree' },
+    { src: 'public/loblolly-image-3.jpg', label: 'Stage 4', description: 'Fully Grown Tree' },
   ];
 
   return (
