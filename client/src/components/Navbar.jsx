@@ -146,10 +146,10 @@ const Navbar = () => {
                     p={4}
                     borderRadius="md"
                     mt={4}
+                    mb={4}
                   >
                     Logout
                   </Button>
-
                 </>
               ) : (
                 <>
@@ -157,6 +157,10 @@ const Navbar = () => {
                   <Link onClick={onClose} to="/login" style={linkStyle}>Log In</Link>
                 </>
               )}
+              <Divider borderColor="white" borderWidth="2px" borderStyle="solid" mb={4} mt={4}/>
+              <Link onClick={onClose} to="/about" style={linkStyle}>About Us</Link>
+              <Link onClick={onClose} to="/contact" style={linkStyle}>Contact</Link>
+              <Link onClick={onClose} to="/privacypolicy" style={linkStyle}>Privacy Policy</Link>
             </Flex>
           </DrawerBody>
         </DrawerContent>

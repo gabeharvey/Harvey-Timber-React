@@ -1,5 +1,17 @@
 import { Box, Flex, Link, Text } from '@chakra-ui/react';
 
+const linkStyle = {
+  cursor: 'pointer',
+  marginRight: '16px',
+  color: 'white',
+  fontFamily: 'Chakra Petch, cursive',
+  fontSize: '15px',
+  fontWeight: 'bold',
+  _hover: { textDecoration: 'underline' },
+  marginBottom: '15px',
+  marginTop: '15px'
+};
+
 const Footer = () => {
   return (
     <Flex
@@ -17,13 +29,13 @@ const Footer = () => {
     >
       <Flex direction="column" align="center">
         <Box>
-          <Link href="/about" mr={3} _hover={{ textDecoration: 'underline' }}>
+          <Link href="/about" style={linkStyle}>
             About Us
           </Link>
-          <Link href="/contact" mr={3} _hover={{ textDecoration: 'underline' }}>
+          <Link href="/contact" style={linkStyle}>
             Contact
           </Link>
-          <Link href="/privacypolicy" _hover={{ textDecoration: 'underline' }}>
+          <Link href="/privacypolicy" style={linkStyle}>
             Privacy Policy
           </Link>
         </Box>
