@@ -91,7 +91,7 @@ const SignUp = () => {
         <Link style={linkStyle} onClick={() => handleLinkClick('/login')}>
           Log In
         </Link>{' '}
-        to access <Text fontFamily='Special Elite, cursive'>Harvey Timber.</Text>
+        to access Harvey Timber.
       </Text>
     </Flex>
   );

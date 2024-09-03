@@ -13,6 +13,7 @@ import Wildlife from './components/Wildlife.jsx';
 import PrivacyPolicy from './components/PrivacyPolicy.jsx';
 import Contact from './components/Contact.jsx';
 import AboutUs from './components/AboutUs.jsx';
+import NotFound from './components/NotFound.jsx'
 import PrivateRoute from './components/PrivateRoute.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
             <AboutUs />
           </PrivateRoute>
         )
+      },
+      {
+        path: '*',
+        element: <NotFound />
       }
     ]
   }

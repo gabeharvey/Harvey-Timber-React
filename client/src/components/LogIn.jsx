@@ -80,7 +80,7 @@ const LogIn = () => {
         </Button>
       </Box>
       <Text fontSize="lg" color="white" fontFamily='Chakra Petch, cursive' mt={50}>
-        New to <Text fontFamily='Special Elite, cursive'>Harvey Timber?</Text>{' '}
+        New to Harvey Timber?{' '}
         <Link style={linkStyle} onClick={() => handleLinkClick('/signup')}>
           Sign Up
         </Link>{' '}
