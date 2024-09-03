@@ -9,7 +9,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 const LogIn = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useContext(AuthContext);
+  const { login, isAuthenticated } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -22,6 +22,18 @@ const LogIn = () => {
     } catch (error) {
       console.error('Error logging in:', error);
       alert('Error logging in: ' + (error.response?.data?.message || 'Unknown error'));
+    }
+  };
+
+  const handleLinkClick = (path) => {
+    if (path === '/signup') {
+      navigate(path);
+    } else {
+      if (!isAuthenticated) {
+        navigate('/login');
+      } else {
+        navigate(path);
+      }
     }
   };
 
@@ -74,7 +86,7 @@ const LogIn = () => {
       </Box>
       <Text fontSize="lg" color="white" fontFamily='Chakra Petch, cursive' mt={50}>
         New to <Text fontFamily='Special Elite, cursive'>Harvey Timber?</Text>{' '}
-        <Link style={linkStyle} href="/signup">
+        <Link style={linkStyle} onClick={() => handleLinkClick('/signup')}>
           Sign Up
         </Link>{' '}
         to enjoy everything our website has to offer.

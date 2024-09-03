@@ -10,7 +10,7 @@ const SignUp = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useContext(AuthContext);
+  const { login, isAuthenticated } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSignup = async () => {
@@ -22,6 +22,14 @@ const SignUp = () => {
     } catch (error) {
       console.error('Error signing up:', error);
       alert('Error signing up: ' + (error.response?.data?.message || 'Unknown error'));
+    }
+  };
+
+  const handleLinkClick = (path) => {
+    if (!isAuthenticated) {
+      navigate('/login');
+    } else {
+      navigate(path);
     }
   };
 
@@ -81,7 +89,7 @@ const SignUp = () => {
       </Box>
       <Text fontSize="lg" color="white" fontFamily='Chakra Petch, cursive' mt={50}>
         Already a member?{' '}
-        <Link style={linkStyle} href="/login">
+        <Link style={linkStyle} onClick={() => handleLinkClick('/login')}>
           Log In
         </Link>{' '}
         to access <Text fontFamily='Special Elite, cursive'>Harvey Timber.</Text>
